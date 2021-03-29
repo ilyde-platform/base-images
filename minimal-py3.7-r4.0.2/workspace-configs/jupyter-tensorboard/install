@@ -1,0 +1,5 @@
+
+#If using this script without first using the Jupyter install script, please ensure that you add in here the jupyter_notebook_config.py edits from the Jupyter install script. 
+
+pip install jupyter-tensorboard --upgrade
+ jupyter tensorboard enable --system

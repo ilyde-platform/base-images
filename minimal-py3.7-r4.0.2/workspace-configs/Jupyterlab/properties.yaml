@@ -1,0 +1,4 @@
+jupyterlab:
+  title: "JupyterLab"
+  start: [ /var/opt/workspaces/Jupyterlab/start.sh ]
+ 

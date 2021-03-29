@@ -1,0 +1,11 @@
+ wget -q http://apache.claz.org/zeppelin/zeppelin-0.8.0/zeppelin-0.8.0-bin-all.tgz && \
+ tar xvzf zeppelin-0.8.0-bin-all.tgz
+ rm -rf /opt/zeppelin 
+ mv zeppelin-0.8.0-bin-all /opt/zeppelin 
+ rm zeppelin-0.8.0-bin-all.tgz 
+ chown -R ubuntu:ubuntu /opt/zeppelin
+ mv  /var/opt/workspaces/Zeppelin/zeppelin-env.txt /opt/zeppelin/conf/zeppelin-env.sh 
+ chmod 755 /opt/zeppelin/conf/zeppelin-env.sh 
+ chown ubuntu:ubuntu /opt/zeppelin/conf/zeppelin-env.sh 
+ sed -i '94d' /opt/zeppelin/conf/zeppelin-env.sh 
+ chown -R ubuntu:ubuntu /opt/zeppelin

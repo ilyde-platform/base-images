@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/opt/code-server/code-server ${ILYDE_WORKING_DIR} --auth none --bind-addr 0.0.0.0:8888 --extensions-dir ${HOME}/.local/share/code-server/extensions --disable-telemetry

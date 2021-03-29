@@ -1,0 +1,3 @@
+rstudio:
+  title: "RStudio"
+  start: [ "/var/opt/workspaces/rstudio/start" ]

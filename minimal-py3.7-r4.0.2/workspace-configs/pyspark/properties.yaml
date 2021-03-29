@@ -1,0 +1,4 @@
+pyspark:
+  title: "PySpark"
+  start: [ "/var/opt/workspaces/pyspark/start" ]
+ 

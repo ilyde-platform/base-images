@@ -1,0 +1,4 @@
+Zeppelin:
+  title: "Zeppelin"
+  start: [ "/var/opt/workspaces/Zeppelin/start" ]
+  

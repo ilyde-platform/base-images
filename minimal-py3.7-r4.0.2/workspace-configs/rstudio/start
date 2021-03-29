@@ -1,0 +1,22 @@
+#!/bin/bash
+set -o nounset -o errexit -o pipefail
+
+#Configure Spark if present
+if [ -n "${SPARK_HOME:-}" ]; then
+  echo ".libPaths(c(file.path(Sys.getenv('SPARK_HOME'), 'R', 'lib'), .libPaths()))" >> ~/.Rprofile
+fi
+
+# Set environment variable for where the history file will be stored
+export R_HISTFILE='ilyde.Rhistory'
+
+printenv >> ~/.Renviron
+
+# Set initial working directory, which is the diretory RStudio opens up to
+mkdir -p ~/.rstudio/monitored/user-settings/
+echo -e "initialWorkingDirectory=\"${DRT_WORKING_DIR:-"${ILYDE_WORKING_DIR}"}\"\n" >> ~/.rstudio/monitored/user-settings/user-settings
+
+
+mkdir -p /tmp/rstudio-server
+RSTUDIO_SERVER_DATA_DIR=/tmp/rstudio-server
+export USER="rstudio"
+/usr/lib/rstudio-server/bin/rserver --www-port=8888 --auth-none=1 --server-app-armor-enabled=0

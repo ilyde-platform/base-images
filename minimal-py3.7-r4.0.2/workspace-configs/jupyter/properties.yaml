@@ -1,0 +1,4 @@
+jupyter:
+  title: "Jupyter"
+  start: [ "/var/opt/workspaces/jupyter/start" ]
+  

@@ -1,0 +1,4 @@
+vscode:
+ title: "vscode"
+ start: [ "/var/opt/workspaces/vscode/start" ]
+ 
